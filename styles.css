@@ -25,3 +25,16 @@ body, a:link, a:visited, a:active{
   border-radius:75px;
   position: absolute;
 }
+
+
+.dizzy{
+  border:75px solid pink;
+  border-radius:75px;
+  position: absolute;
+}
+
+.bouncy{
+  border:75px solid green;
+  border-radius:75px;
+  position: absolute;
+}
