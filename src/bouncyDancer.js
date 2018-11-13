@@ -55,6 +55,12 @@ BouncyDancer.prototype.step = function() {
   });
 }
 
+var styleSettings = {
+  height: 100,
+  width: 100
+};
+this.$node.css(styleSettings);
+
 // anime({
 //   targets: '.bouncy',
 //   translateY: [

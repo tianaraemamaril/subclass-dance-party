@@ -59,6 +59,10 @@ Dancer.prototype.setPosition = function(top, left) {
 //   this.$node.css(styleSettings);
 // }
 
+// Dancer.prototype.breakLineUp = function () {
+//   this.setPosition($("body").heigth() * Math.random(), $("body").width() * Math.random());
+// };
+
 Dancer.prototype.lineUp = function(yValue) {
   this.setPosition(yValue,10);
 };

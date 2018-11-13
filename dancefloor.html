@@ -20,7 +20,21 @@
       <a href="#" class="lineUpDancersButton">line up the dancers!</a>
     </div>
 
+  
+
     <script src="src/init.js"></script>
+    <script>
+
+      $('lineUpDancersButton').on('click', function(event) {
+          var yValue = 10;
+          for (var i = 0; i < window.dancers.length; i++) {
+            window.dancers[i].lineup();
+            yValue += window.dancers[i].$node.height();
+          }
+        });
+    </script>
+
+
   </body>
 
 </html>

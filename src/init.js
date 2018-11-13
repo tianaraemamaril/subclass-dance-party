@@ -15,6 +15,8 @@ $(document).ready(function() {
      * A new object of the given type will be created and added
      * to the stage.
      */
+// Remember you've got a global array of all created dancers (it's defined in src/init.js) 
+// so you can loop through that array and tell each object to lineUp.
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
     // get the maker function for the kind of dancer we're supposed to make
@@ -28,6 +30,16 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
+
+  $('lineUpDancersButton').on('click', function(event) {
+    var yValue = 10;
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].lineup();
+      yValue += window.dancers[i].$node.height();
+    }
+  })
+
 });
 

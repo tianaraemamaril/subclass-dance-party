@@ -44,11 +44,18 @@ DANCERS
 }
 
 .bouncy{
-  border:75px solid green;
-  border-radius:75px;
+  -webkit-transition: top 1s, left 1s, height .5s, width .5s;
+  background: url('happyPoro.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border:0;
   position: absolute;
+  width: 150px;
+  height: 150px;
+  -webkit-animation: spin 5s infinite linear;
 }
 
-.blinky{
+/*.blinky{
   background-image: url(poro.gif);
 }
+*/
