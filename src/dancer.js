@@ -2,8 +2,7 @@
 // var makeDancer = function(top, left, timeBetweenSteps) {
 
 //   var dancer = {};
-//   // dancer.Teddy = 'boy';
-//   // dancer.Tiana = 'girl';
+
 //   // use jQuery to create an HTML <span> tag
 //   dancer.$node = $('<span class="dancer"></span>');
 
@@ -32,18 +31,22 @@
 //   return dancer;
 // };
 
-var Dancer = function(top, left, timeBetweenSteps) {
-  // this.step = setTimeout(dancer.step, timeBetweenSteps);
-  // this.setPosition = 
-  // this.Teddy = boy;
-  // this.Tiana = girl;
-  this.$node = $('<span class="dancer"></span>');
 
+var Dancer = function(top, left, timeBetweenSteps) {
+  this.$node = $('<span class="dancer"></span>');
+  this.step();
+  this.setPosition(top, left);
+  this.timeBetweenSteps = timeBetweenSteps;
+};
 
 Dancer.prototype.step = function() {
-  setTimeout(this.step, timeBetweenSteps);
-};
-this.step();
+  // var dancer = this;
+  // setTimeout(Dancer.prototype.step.bind(dancer), this.timeBetweenSteps);
+  //setTimeout(this.step, this.timeBetweenSteps);
+  
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
+
+}
 
 Dancer.prototype.setPosition = function(top, left) {
   var styleSettings = {
@@ -51,10 +54,7 @@ Dancer.prototype.setPosition = function(top, left) {
     left: left
   };
   this.$node.css(styleSettings);
-};
-  this.setPosition(top, left);
-  return this;
-};
+}
 
 
 
