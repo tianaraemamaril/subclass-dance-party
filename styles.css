@@ -3,7 +3,9 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url(background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
   font-size: 25px;
 }
 body, a:link, a:visited, a:active{
@@ -16,10 +18,18 @@ body, a:link, a:visited, a:active{
 .topbar{
   height:32px;
   background-color: #555;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .title{
   background-color: #777;
 }
+
+
+/*/////////////////////////////////
+DANCERS
+/////////////////////////////////*/
 .dancer{
   border:75px solid yellow;
   border-radius:75px;
@@ -37,4 +47,8 @@ body, a:link, a:visited, a:active{
   border:75px solid green;
   border-radius:75px;
   position: absolute;
+}
+
+.blinky{
+  background-image: url(poro.gif);
 }
