@@ -1,7 +1,6 @@
 var BouncyDancer = function(top, left, timeBetweenSteps) {
   
   Dancer.call(this, top, left, timeBetweenSteps);
-  
   this.$node.addClass('bouncy');
 
 };
@@ -53,13 +52,24 @@ BouncyDancer.prototype.step = function() {
       }
     }
   });
-}
+
 
 var styleSettings = {
   height: 100,
   width: 100
 };
 this.$node.css(styleSettings);
+
+var grow = this;
+$('.bouncy').on('mouseover', function() {
+  var styleSettings = {
+    height: 200,
+    width: 200
+  };
+  grow.$node.css(styleSettings);
+});
+}
+
 
 // anime({
 //   targets: '.bouncy',

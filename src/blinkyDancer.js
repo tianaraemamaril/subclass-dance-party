@@ -23,7 +23,6 @@
 var BlinkyDancer = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;  
   Dancer.call(this, top, left, timeBetweenSteps);
-  this.node = $('<img src="poro.gif">')
 };
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);

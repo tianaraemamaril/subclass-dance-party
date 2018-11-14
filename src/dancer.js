@@ -41,8 +41,7 @@ var Dancer = function(top, left, timeBetweenSteps) {
 
 Dancer.prototype.step = function() {
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
-
-}
+};
 
 Dancer.prototype.setPosition = function(top, left) {
   var styleSettings = {
@@ -50,20 +49,20 @@ Dancer.prototype.setPosition = function(top, left) {
     left: left
   };
   this.$node.css(styleSettings);
-}
+};
 
 // Dancer.prototype.lineUp = function() {
 //   var styleSettings = {
 //     left: 0;
 //   };
 //   this.$node.css(styleSettings);
-// }
+// };
 
 // Dancer.prototype.breakLineUp = function () {
 //   this.setPosition($("body").heigth() * Math.random(), $("body").width() * Math.random());
 // };
 
-Dancer.prototype.lineUp = function(yValue) {
-  this.setPosition(yValue,10);
-};
+// Dancer.prototype.lineUp = function(yValue) {
+//   this.setPosition(yValue,10);
+// };
 

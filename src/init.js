@@ -33,13 +33,18 @@ $(document).ready(function() {
     window.dancers.push(dancer);
   });
 
-  $('lineUpDancersButton').on('click', function(event) {
-    var yValue = 10;
-    for (var i = 0; i < window.dancers.length; i++) {
-      window.dancers[i].lineup();
-      yValue += window.dancers[i].$node.height();
-    }
-  })
+  // $(".lineUpDancersButton").on("click", function(event) {
+  //   window.dancers.forEach(function(dancer){
+  //     dancer.lineUp();
+  //   });
+  // })
+  // $('lineUpDancersButton').on('click', function(event) {
+  //   var yValue = 10;
+  //   for (var i = 0; i < window.dancers.length; i++) {
+  //     window.dancers[i].lineup();
+  //     yValue += window.dancers[i].$node.height();
+  //   }
+  // })
 
 });
 

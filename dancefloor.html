@@ -8,6 +8,7 @@
     <script src="src/blinkyDancer.js"></script>
     <script src="src/dizzyDancer.js"></script>
     <script src="src/bouncyDancer.js"></script>
+    <script src="src/mustachedDancer.js"></script>
     <script src="bower_components/animejs"></script>
   </head>
 
@@ -17,13 +18,14 @@
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">add a blinky dancer</a>    
       <a href="#" class="addDancerButton" id="dizzy" data-dancer-maker-function-name="DizzyDancer">add a dizzy dancer</a>
       <a href="#" class="addDancerButton" id="bouncy"data-dancer-maker-function-name="BouncyDancer">add a bouncy dancer</a>
+      <a href="#" class="addDancerButton" id="mustached"data-dancer-maker-function-name="MustachedDancer">add a mustached dancer</a>
       <a href="#" class="lineUpDancersButton">line up the dancers!</a>
     </div>
 
   
 
     <script src="src/init.js"></script>
-    <script>
+<!--     <script>
 
       $('lineUpDancersButton').on('click', function(event) {
           var yValue = 10;
@@ -32,7 +34,7 @@
             yValue += window.dancers[i].$node.height();
           }
         });
-    </script>
+    </script> -->
 
 
   </body>
