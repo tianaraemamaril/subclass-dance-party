@@ -1,5 +1,26 @@
 $(document).ready(function() {
+
   window.poros = [];
+  // window.dravens = [];
+
+  // $('.addDravenButton').on('click', function(event) {
+  //   var dravenMakerFunctionName = $(this).data('draven-maker-function-name');
+  //   var dravenMakerFunction = window[dravenMakerFunctionName];
+  //   var draven = new dravenMakerFunction(
+  //     $("body").height() = 750,                                  
+  //     $("body").width() = 130
+    
+  //   );
+  //   $('body').append(draven.$node);
+  //   window.dravens.push(draven);
+  // });
+
+  // $(".surpriseButton").on("click", function(event) {
+  //   window.poros.forEach(function(poro){
+  //     // poro.Draven();
+  //     poro.breakLineUp();
+  //   });
+  // });
 
   $('.addPoroButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -18,20 +39,21 @@ $(document).ready(function() {
 // Remember you've got a global array of all created poros (it's defined in src/init.js) 
 // so you can loop through that array and tell each object to lineUp.
     var poroMakerFunctionName = $(this).data('poro-maker-function-name');
-
+    
     // get the maker function for the kind of poro we're supposed to make
     var poroMakerFunction = window[poroMakerFunctionName];
-
+    
     // make a poro with a random position
 
     var poro = new poroMakerFunction(
-      $("body").height() * Math.random(),
+      $("body").height() * Math.random(),                                  
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(poro.$node);
     window.poros.push(poro);
   });
+    
 
   $(".lineUpPorosButton").on("click", function(event) {
     window.poros.forEach(function(poro){
@@ -45,9 +67,10 @@ $(document).ready(function() {
     });
   })
 
-  $(".surpriseButton").on("click", function(event) {
+  $(".addPoroButton.surpriseButton").on("click", function(event) {
     window.poros.forEach(function(poro){
-      poro.lineUp();
+      // poro.Draven();
+      poro.breakLineUp();
     });
   })
   // $('lineUpporosButton').on('click', function(event) {

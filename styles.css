@@ -12,7 +12,7 @@ body{
 body, a:link, a:visited, a:active{
   color: white;
 }
-.title, .addPoroButton, .lineUpPorosButton, .surpriseButton, .breakUpPorosButton, .addDravenButton{
+.title, .addPoroButton, .lineUpPorosButton, .surpriseButton{
   color: white;
   padding:5px 12px;
   float:center;
@@ -40,15 +40,14 @@ Poros
   position: absolute;
 }
 .draven{
-  margin: 0 auto;
-  -webkit-transition: top 1s, left 1s, height .5s, width .5s;
   background: url('draven.gif');
   background-size: 100%;
-  background-repeat: repeat;
   border:0;
   position: absolute;
   width: 500px;
   height: 650px;
+  margin-left: 710px;
+  margin-top: 120px;
 }
 
 .sleepy{

@@ -63,14 +63,13 @@ Poro.prototype.lineUp = function(i) {
 // Poro.prototype.Draven = function() {
 
 //     var styleSettings = {
-//       left: window.width/2
+//       left: window.screen.width/2,
+//       top: window.screen.height/2
 //     };
 //     this.$node.css(styleSettings);
 //   };
-// this.$node.animate({
-//   left: '25px'
-// });
-// };
+
+
 Poro.prototype.breakLineUp = function () {
   this.setPosition($("body").height() * Math.random(), $("body").width() * Math.random());
 };

@@ -1,25 +1,24 @@
 var Draven = function(top, left, timeBetweenSteps) {
-
-  Poro.call(this, top, left, timeBetweenSteps);
-  this.left = window.screen.width/2
-  this.top = window.screen.height/2
-  this.$node.addClass('draven');
-
+  this.timeBetweenSteps = timeBetweenSteps;
+  this.$node = $('<span class="draven"></span>');
+  this.step();
+  this.left = window.screen.width/2;
+  this.top = window.screen.height/2;
 };
-
-Draven.prototype = Object.create(Poro.prototype);
-Draven.prototype.constructor = Draven;
-
-
 
 Draven.prototype.step = function() {
-  Poro.prototype.step.call(this);
-  
-  
-  var position = this.$node.position();
-  // this.top = window.height/2
-  // this.left = window.width/2
-  // $('addDravenButton').on('click', function() {
-  //   $(this).prop('disabled', true);
-  // })
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
+
+Draven.prototype.setPosition = function(top, left) {
+  var styleSettings = {
+    top: top,
+    left: left
+  };
+  this.$node.css(styleSettings);
+};
+      
+
+Draven.prototype.breakLineUp = function () {
+  this.setPosition($("body").height() * Math.random(), $("body").width() * Math.random());
+};                            
