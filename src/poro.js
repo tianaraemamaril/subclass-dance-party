@@ -1,4 +1,4 @@
-// Creates and returns a new dancer object that can step
+// Creates and returns a new Poro object that can step
 // var makeDancer = function(top, left, timeBetweenSteps) {
 
 //   var dancer = {};
@@ -32,18 +32,18 @@
 // };
 
 
-var Dancer = function(top, left, timeBetweenSteps) {
+var Poro = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
-  this.$node = $('<span class="dancer"></span>');
+  this.$node = $('<span class="poro"></span>');
   this.step();
   this.setPosition(top, left);
 };
 
-Dancer.prototype.step = function() {
+Poro.prototype.step = function() {
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 
-Dancer.prototype.setPosition = function(top, left) {
+Poro.prototype.setPosition = function(top, left) {
   var styleSettings = {
     top: top,
     left: left
@@ -51,18 +51,31 @@ Dancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
-// Dancer.prototype.lineUp = function() {
-//   var styleSettings = {
-//     left: 0;
+Poro.prototype.lineUp = function(i) {
+    var styleSettings = {
+      // top: window.screen.height/6,
+      // left: (window.screen.width / window.poros.length) * i + 100,
+      left: 0
+    };
+    this.$node.css(styleSettings);
+  };
+
+// Poro.prototype.Draven = function() {
+
+//     var styleSettings = {
+//       left: window.width/2
+//     };
+//     this.$node.css(styleSettings);
 //   };
-//   this.$node.css(styleSettings);
+// this.$node.animate({
+//   left: '25px'
+// });
 // };
+Poro.prototype.breakLineUp = function () {
+  this.setPosition($("body").height() * Math.random(), $("body").width() * Math.random());
+};
 
-// Dancer.prototype.breakLineUp = function () {
-//   this.setPosition($("body").heigth() * Math.random(), $("body").width() * Math.random());
-// };
-
-// Dancer.prototype.lineUp = function(yValue) {
+// Poro.prototype.lineUp = function(yValue) {
 //   this.setPosition(yValue,10);
 // };
 

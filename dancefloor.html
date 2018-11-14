@@ -4,22 +4,26 @@
     <title>Object Dance Party</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="lib/jquery.js"></script>
-    <script src="src/dancer.js"></script>
-    <script src="src/blinkyDancer.js"></script>
-    <script src="src/dizzyDancer.js"></script>
-    <script src="src/bouncyDancer.js"></script>
-    <script src="src/mustachedDancer.js"></script>
+    <script src="src/poro.js"></script>
+    <script src="src/winkyPoro.js"></script>
+    <script src="src/sleepyPoro.js"></script>
+    <script src="src/happyPoro.js"></script>
+    <script src="src/derpyPoro.js"></script>
+    <script src="src/draven.js"></script>
     <script src="bower_components/animejs"></script>
   </head>
 
   <body>
     <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">add a blinky dancer</a>    
-      <a href="#" class="addDancerButton" id="dizzy" data-dancer-maker-function-name="DizzyDancer">add a dizzy dancer</a>
-      <a href="#" class="addDancerButton" id="bouncy"data-dancer-maker-function-name="BouncyDancer">add a bouncy dancer</a>
-      <a href="#" class="addDancerButton" id="mustached"data-dancer-maker-function-name="MustachedDancer">add a mustached dancer</a>
-      <a href="#" class="lineUpDancersButton">line up the dancers!</a>
+      <span class="title">PORO DANCE PARTY!!</span>
+      <a href="#" class="addPoroButton" data-poro-maker-function-name="WinkyPoro">add a winky poro</a>    
+      <a href="#" class="addPoroButton" id="sleepy" data-poro-maker-function-name="SleepyPoro">add a sleepy poro</a>
+      <a href="#" class="addPoroButton" id="happy"data-poro-maker-function-name="HappyPoro">add a rebellious happy poro</a>
+      <a href="#" class="addPoroButton" id="derpy"data-poro-maker-function-name="DerpyPoro">add a derpy poro</a>
+      <a href="#" class="lineUpPorosButton">line up the poros</a>
+      <a href="#" class="breakUpPorosButton">scatter</a>
+      <a href="#" class="addPoroButton" id="draven" data-poro-maker-function-name="Draven">SURPRISE!</a>
+      
     </div>
 
   
@@ -27,11 +31,11 @@
     <script src="src/init.js"></script>
 <!--     <script>
 
-      $('lineUpDancersButton').on('click', function(event) {
+      $('lineUpPorosButton').on('click', function(event) {
           var yValue = 10;
-          for (var i = 0; i < window.dancers.length; i++) {
-            window.dancers[i].lineup();
-            yValue += window.dancers[i].$node.height();
+          for (var i = 0; i < window.poros.length; i++) {
+            window.poros[i].lineup();
+            yValue += window.poros[i].$node.height();
           }
         });
     </script> -->

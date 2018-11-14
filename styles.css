@@ -3,42 +3,55 @@ body, html{
 }
 body{
   margin: 0px;
-  background-image: url(poroBackground.png);
-  /*background-attachment: fixed;*/
+  background-image: url(background.jpg);
+ /* background-attachment: fixed;*/
   background-size: cover;
+  background-repeat: no-repeat;
   height: 100%;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: white;
 }
-.title, .addDancerButton, .lineUpDancersButton{
+.title, .addPoroButton, .lineUpPorosButton, .surpriseButton, .breakUpPorosButton, .addDravenButton{
+  color: white;
   padding:5px 12px;
   float:center;
+  font-size: 25px;
+  margin-top: 50px;
 }
 .topbar{
-  height:32px;
-  background-color: #555;
+  height:50px;
+ /* background-color: #555;*/
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.title{
-  background-color: #777;
-}
+
 
 
 /*/////////////////////////////////
-DANCERS
+Poros
 /////////////////////////////////*/
-.dancer{
+
+.poro{
   -webkit-transition: top 1s, left 1s;
-  border:75px solid yellow;
-  border-radius:75px;
+  border:100px solid yellow;
+  border-radius:100px;
   position: absolute;
 }
+.draven{
+  margin: 0 auto;
+  -webkit-transition: top 1s, left 1s, height .5s, width .5s;
+  background: url('draven.gif');
+  background-size: 100%;
+  background-repeat: repeat;
+  border:0;
+  position: absolute;
+  width: 500px;
+  height: 650px;
+}
 
-
-.dizzy{
+.sleepy{
   -webkit-transition: top 1s, left 1s, height .5s, width .5s;
   background: url('sleepyPoro.png');
   background-size: 100%;
@@ -50,7 +63,7 @@ DANCERS
   -webkit-animation: spin 5s infinite linear;
 }
 
-.bouncy{
+.happy{
   -webkit-transition: top 1s, left 1s, height .5s, width .5s;
   background: url('happyPoro.png');
   background-size: 100%;
@@ -62,7 +75,7 @@ DANCERS
   -webkit-animation: spin 5s infinite linear;
 }
 
-.mustached{
+.derpy{
   -webkit-transition: top 1s, left 1s, height .5s, width .5s;
   background: url('derpyPoro.png');
   background-size: 100%;
@@ -74,7 +87,23 @@ DANCERS
   -webkit-animation: spin 5s infinite linear;
 }
 
-/*.blinky{
-  background-image: url(poro.gif);
+.winky{
+  -webkit-transition: top 1s, left 1s, height .5s, width .5s;
+  background: url('winkyPoro.png');
+  background-size: 100%;
+  background-repeat: repeat;
+  border:0;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 5s infinite linear;
 }
-*/
+
+.derpy:hover {
+  transition: 1.70s;
+  -webkit-transition: 1.70s;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+
